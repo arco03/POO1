@@ -24,6 +24,7 @@ public class Player : MonoBehaviour
     }
     private void Update()
     {
+        //salto del jugador
         if (onGround && Input.GetKeyDown(JumpKey))
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
