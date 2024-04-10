@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 namespace Playable
@@ -16,10 +15,11 @@ namespace Playable
         [SerializeField] private Transform attackPoint;
         
         [SerializeField] private Character _character;
+        
         private float _x;
         private void Start()
         {
-            _character.SetUp(jumpForce, speed, attackRange, attackPoint);
+            _character.SetUp(jumpForce, speed, attackRange, attackPoint, attackPoint);
         }
         
         private void FixedUpdate()

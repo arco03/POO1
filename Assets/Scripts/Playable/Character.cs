@@ -1,24 +1,31 @@
 using UnityEngine;
+using Variables;
 
 namespace Playable
 {
     [RequireComponent(typeof(Rigidbody2D))]
-    public class Character : MonoBehaviour
+    public class Character : MonoBehaviour, IDamageable
     {
+        // Dependencies
+        private VariableInt _hp;
         private float _jumpForce;
         private float _speed;
         private float _attackRange;
-        private Transform _attackPoint;
+        private Transform _attackPointA;
+        private Transform _attackPointB;
         
         private Rigidbody2D _rb;
         private bool _onGround;
 
-        public void SetUp(float jumpForce, float speed, float attackRange, Transform attackPoint)
+        // SetUp Method that inject dependencies.
+        public void SetUp(VariableInt hp, float jumpForce, float speed, float attackRange, Transform attackPointA, Transform attackPointB)
         {
+            _hp = hp;
             _jumpForce = jumpForce;
             _speed = speed;
             _attackRange = attackRange;
-            _attackPoint = attackPoint;
+            _attackPointA = attackPointA;
+            _attackPointB = attackPointB;
         }
 
         public void Jump()
@@ -34,22 +41,17 @@ namespace Playable
             Vector2 xMovement = new Vector2 (x, 0);
             _rb.velocity = new Vector2 (xMovement.x*_speed, _rb.velocity.y);
         }
-    
-        public void Attack()
-        {
-            Collider2D[] results = new Collider2D[2];
-            Physics2D.OverlapCircleNonAlloc(_attackPoint.position, _attackRange, results);
         
-            //foreach(Collider2D coll in results)
-            //{
-                
-            //}
+        public void Damage(int damage)
+        {
+            
         }
-        
-        public void Damage()
-        {
 
+        public void KnockBack()
+        {
+            
         }
+        
         private void Awake()
         {
             _rb = GetComponent<Rigidbody2D>();
@@ -66,11 +68,9 @@ namespace Playable
         
         public void OnDrawGizmos()
         {
-            if (_attackPoint == null) return;
+            // if (_attackPoint == null) return;
             Gizmos.color = Color.red;
-            Gizmos.DrawWireSphere(_attackPoint.position, _attackRange);
+            // Gizmos.DrawWireSphere(_attackPoint.position, _attackRange);
         }
-
-        
     }
 }   
