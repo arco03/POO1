@@ -13,12 +13,13 @@ namespace Playable
         private float _attackRange;
         private Transform _attackPointA;
         private Transform _attackPointB;
-        
+
         private Rigidbody2D _rb;
         private bool _onGround;
 
         // SetUp Method that inject dependencies.
-        public void SetUp(VariableInt hp, float jumpForce, float speed, float attackRange, Transform attackPointA, Transform attackPointB)
+        public void SetUp(VariableInt hp, float jumpForce, float speed, float attackRange, Transform attackPointA,
+            Transform attackPointB)
         {
             _hp = hp;
             _jumpForce = jumpForce;
@@ -38,39 +39,32 @@ namespace Playable
 
         public void Move(float x)
         {
-            Vector2 xMovement = new Vector2 (x, 0);
-            _rb.velocity = new Vector2 (xMovement.x*_speed, _rb.velocity.y);
+            Vector2 xMovement = new Vector2(x, 0);
+            _rb.velocity = new Vector2(xMovement.x * _speed, _rb.velocity.y);
         }
-        
+
         public void Damage(int damage)
         {
-            
+            Debug.Log("gg");
         }
 
         public void KnockBack()
         {
-            
+
         }
-        
+
         private void Awake()
         {
             _rb = GetComponent<Rigidbody2D>();
             _onGround = true;
         }
-        
+
         private void OnCollisionEnter2D(Collision2D collision)
         {
-            if(collision.gameObject.CompareTag("Ground"))
+            if (collision.gameObject.CompareTag("Ground"))
             {
                 _onGround = true;
             }
         }
-        
-        public void OnDrawGizmos()
-        {
-            // if (_attackPoint == null) return;
-            Gizmos.color = Color.red;
-            // Gizmos.DrawWireSphere(_attackPoint.position, _attackRange);
-        }
     }
-}   
+}

@@ -1,4 +1,5 @@
 using UnityEngine;
+using Variables;
 
 namespace Playable
 {
@@ -12,14 +13,16 @@ namespace Playable
         [SerializeField] private float jumpForce;
         [SerializeField] private float speed;
         [SerializeField] private float attackRange;
-        [SerializeField] private Transform attackPoint;
+        [SerializeField] private Transform attackPointA;
+        [SerializeField] private Transform attackPointB;
+        [SerializeField] private VariableInt hp;
         
         [SerializeField] private Character _character;
         
         private float _x;
         private void Start()
         {
-            _character.SetUp(jumpForce, speed, attackRange, attackPoint, attackPoint);
+            _character.SetUp(hp,jumpForce, speed, attackRange, attackPointA, attackPointB);
         }
         
         private void FixedUpdate()
