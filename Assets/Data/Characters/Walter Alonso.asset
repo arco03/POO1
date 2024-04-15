@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5230b82ed60261e4b908768b619240bf, type: 3}
-  m_Name: Walter_Alonso
+  m_Name: Walter Alonso
   m_EditorClassIdentifier: 
   characterName: Walter Alonso
   characterSprite: {fileID: 21300000, guid: 76dc6bb4e481f974fa25d60a0218e969, type: 3}
