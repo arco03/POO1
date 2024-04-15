@@ -1,10 +1,12 @@
+using Attacks;
+using Interactable;
 using UnityEngine;
 using Variables;
 
 namespace Playable
 {
     [RequireComponent(typeof(Rigidbody2D))]
-    public class Character : MonoBehaviour, IDamageable
+    public class CharacterController : MonoBehaviour, IDamageable
     {
         // Dependencies
         private VariableInt _hp;
@@ -13,13 +15,17 @@ namespace Playable
         private float _attackRange;
         private Transform _attackPointA;
         private Transform _attackPointB;
+        private Bullet _bulletPrefab;
+        private Transform _spawnPosition;
 
         private Rigidbody2D _rb;
         private bool _onGround;
+        public AttackGun _attackGun;
+        private AttackMelee _attackMelee;
 
         // SetUp Method that inject dependencies.
         public void SetUp(VariableInt hp, float jumpForce, float speed, float attackRange, Transform attackPointA,
-            Transform attackPointB)
+            Transform attackPointB, Bullet bulletPrefab, Transform spawnPosition)
         {
             _hp = hp;
             _jumpForce = jumpForce;
@@ -27,9 +33,23 @@ namespace Playable
             _attackRange = attackRange;
             _attackPointA = attackPointA;
             _attackPointB = attackPointB;
+            _bulletPrefab = bulletPrefab;
+            _spawnPosition = spawnPosition;
+        }
+        public void AttackGun()
+        {
+             Instantiate(_bulletPrefab, _spawnPosition.position, Quaternion.identity);
+             IAttack iattackGun = new AttackGun();
+             iattackGun.Attack();
         }
 
-        public void Jump()
+        public void AttackMelee()
+        {
+            IAttack iattackMelee = new AttackMelee();
+            iattackMelee.Attack();
+        }
+
+        public void Jump()    
         {
             if (!_onGround) return;
 
@@ -45,7 +65,7 @@ namespace Playable
 
         public void Damage(int damage)
         {
-            Debug.Log("gg");
+            
         }
 
         public void KnockBack()

@@ -1,16 +1,16 @@
-﻿using Interactable;
+﻿using System;
+using Interactable;
 using UnityEngine;
 
 namespace Attacks
 {
     public class AttackGun : IAttack
     {
-        private Bullet _bulletPrefab;
-        private Transform _spawnPosition;
-        
+        [SerializeField] private Bullet _bulletPrefab;
+        [SerializeField] private Transform _spawnPosition;
         public void Attack()
         {
-            Object.Instantiate(_bulletPrefab, _spawnPosition.position, Quaternion.identity);
+            Debug.Log("Entro A attack");
         }
     }
 }
