@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5230b82ed60261e4b908768b619240bf, type: 3}
   m_Name: Juan
   m_EditorClassIdentifier: 
-  characterName: Juan
+  characterName: JUAN
   characterSprite: {fileID: 21300000, guid: d4760e76b2df5284389fd05e4944aeff, type: 3}
   animatorController: {fileID: 0}

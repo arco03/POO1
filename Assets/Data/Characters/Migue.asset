@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5230b82ed60261e4b908768b619240bf, type: 3}
   m_Name: Migue
   m_EditorClassIdentifier: 
-  characterName: Migue
+  characterName: MIGUE
   characterSprite: {fileID: -157663894, guid: 4eabdb7b50382054db6355b39326966f, type: 3}
   animatorController: {fileID: 0}

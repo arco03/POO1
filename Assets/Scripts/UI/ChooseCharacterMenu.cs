@@ -25,7 +25,7 @@ namespace UI
         {
             PlayerPrefs.SetInt("PlayerIndex", _index);
             image.sprite = _gameManager.characters[_index].characterSprite;
-            name.text = _gameManager.characters[_index].name;
+            name.text = _gameManager.characters[_index].characterName;
         }
 
         public void AfterCharacter()
