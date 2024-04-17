@@ -449,52 +449,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26b24bbc0d60473a974f66a6fa82ac9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerNumber: 2
   characterView: {fileID: 323905944}
   playerConfiguration: {fileID: 11400000, guid: aa9692b5e1228f144886f56e61e52e18, type: 2}
---- !u!1 &415303606
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 415303607}
-  - component: {fileID: 415303608}
-  m_Layer: 0
-  m_Name: GameManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &415303607
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 415303606}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &415303608
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 415303606}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad12a2d2c7d94f94a0fe8c543e4a6e93, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &430160662
 GameObject:
   m_ObjectHideFlags: 0
@@ -640,6 +597,7 @@ GameObject:
   - component: {fileID: 510108797}
   - component: {fileID: 510108799}
   - component: {fileID: 510108798}
+  - component: {fileID: 510108800}
   m_Layer: 5
   m_Name: Menu
   m_TagString: Untagged
@@ -708,6 +666,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 510108796}
   m_CullTransparentMesh: 1
+--- !u!114 &510108800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 510108796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83c9fd7fd43a4930aaec112d895528e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  character1: {fileID: 686411446}
+  character2: {fileID: 323905945}
+  configuration: {fileID: 11400000, guid: aa9692b5e1228f144886f56e61e52e18, type: 2}
 --- !u!1 &554469496
 GameObject:
   m_ObjectHideFlags: 0
@@ -954,6 +927,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26b24bbc0d60473a974f66a6fa82ac9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerNumber: 1
   characterView: {fileID: 686411445}
   playerConfiguration: {fileID: 11400000, guid: aa9692b5e1228f144886f56e61e52e18, type: 2}
 --- !u!1 &828426072
@@ -1365,8 +1339,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UI.ChooseCharacter.ChooseCharacterController, Assembly-CSharp
+      - m_Target: {fileID: 510108800}
+        m_TargetAssemblyTypeName: UI.ChooseCharacter.ChooseScreen, Assembly-CSharp
         m_MethodName: Play
         m_Mode: 1
         m_Arguments:
@@ -1844,4 +1818,3 @@ SceneRoots:
   - {fileID: 124856739}
   - {fileID: 616324292}
   - {fileID: 2056609789}
-  - {fileID: 415303607}
