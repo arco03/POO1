@@ -37,9 +37,9 @@ namespace Playable
         }
         public void AttackGun()
         {
-             Instantiate(_bulletPrefab, _spawnPosition.position, Quaternion.identity);
-             IAttack iattackGun = new AttackGun();
-             iattackGun.Attack();
+            Instantiate(_bulletPrefab, _spawnPosition.position, Quaternion.identity);
+            IAttack iattackGun = new AttackGun();
+            iattackGun.Attack();
         }
 
         public void AttackMelee()
@@ -48,7 +48,7 @@ namespace Playable
             
         }
 
-        public void Jump()    
+        public void Jump()
         {
             if (!_onGround) return;
 
@@ -64,7 +64,7 @@ namespace Playable
 
         public void Damage(int damage)
         {
-            
+
         }
 
         public void KnockBack()

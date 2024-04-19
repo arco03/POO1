@@ -5,7 +5,7 @@ using Variables;
 
 namespace Playable
 {
-    public class Player : MonoBehaviour  
+    public class Player : MonoBehaviour
     {
         [Header("Control Settings")]
         [SerializeField] private string horizontal;
@@ -22,28 +22,32 @@ namespace Playable
         [SerializeField] private VariableInt hp;
         [SerializeField] private Bullet bulletPrefab;
         [SerializeField] private Transform spawnPosition;
-        
-        [FormerlySerializedAs("_character")] [SerializeField] private CharacterController characterController;
-        
+
+        [FormerlySerializedAs("_character")][SerializeField] private CharacterController characterController;
+
         private float _x;
         private void Start()
         {
+
+            
+
             characterController.SetUp(hp,jumpForce, speed, attackRange,  bulletPrefab, spawnPosition,controladorAtaque);
+
         }
-        
+
         private void FixedUpdate()
         {
             characterController.Move(_x);
         }
-        
+
         private void Update()
         {
             _x = Input.GetAxisRaw(horizontal);
-            if  (Input.GetKeyDown(jumpKey))
+            if (Input.GetKeyDown(jumpKey))
             {
                 characterController.Jump();
             }
-            
+
             if (Input.GetKeyDown(attackGunKey))
             {
                 characterController.AttackGun();
@@ -53,6 +57,8 @@ namespace Playable
             {
                 characterController.AttackMelee();
             }
+
         }
     }
 }
+
