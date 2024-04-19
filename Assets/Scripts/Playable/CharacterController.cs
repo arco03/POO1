@@ -14,6 +14,7 @@ namespace Playable
         private float _speed;
         private float _attackRange;
         private Transform _controladorAtaque;
+        private float _radio;
         private Bullet _bulletPrefab;
         private Transform _spawnPosition;
         [SerializeField] private AttackMelee _attackMelee;
@@ -25,7 +26,7 @@ namespace Playable
 
         // SetUp Method that inject dependencies.
         public void SetUp(VariableInt hp, float jumpForce, float speed, float attackRange,
-            Bullet bulletPrefab, Transform spawnPosition,Transform controladorAtaque)
+            Bullet bulletPrefab, Transform spawnPosition,Transform controladorAtaque, float radio)
         {
             _hp = hp;
             _jumpForce = jumpForce;
@@ -34,6 +35,7 @@ namespace Playable
             _bulletPrefab = bulletPrefab;
             _spawnPosition = spawnPosition;
             _controladorAtaque = controladorAtaque;
+            _radio = radio;
         }
         public void AttackGun()
         {
@@ -44,8 +46,9 @@ namespace Playable
 
         public void AttackMelee()
         {
-           _attackMelee.Attack();
-            
+            IAttack iattack = new AttackMelee();
+            iattack.Attack();
+
         }
 
         public void Jump()

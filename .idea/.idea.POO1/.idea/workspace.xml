@@ -6,9 +6,21 @@
   <component name="ChangeListManager">
     <list default="true" id="d025a2b9-4f32-47dc-82ac-560d7ca96109" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.POO1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.POO1/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/Characters/Antonio.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Characters/Antonio.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/Characters/Juan.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Characters/Juan.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/Characters/Migue.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Characters/Migue.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/Characters/Walter Alonso.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Characters/Walter Alonso.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/Characters/Yeison.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Characters/Yeison.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ChooseCharacters.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ChooseCharacters.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Attacks/AttackMelee.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Attacks/AttackMelee.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Playable/CharacterController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Playable/CharacterController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Playable/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Playable/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Characters/Campesino/Idle/campesino_idle.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Characters/Campesino/Idle/campesino_idle.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Characters/Gamin/Idle/gamin_idle.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Characters/Gamin/Idle/gamin_idle.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Characters/Muñeco Normal/Idle/juan_idle.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Characters/Muñeco Normal/Idle/juan_idle.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Characters/Nero/Idle/nero_idle.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Characters/Nero/Idle/nero_idle.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Characters/Pupi/Idle/pupi_idle.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Characters/Pupi/Idle/pupi_idle.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,7 +46,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "Feature/Migue",
+    "git-widget-placeholder": "develop",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -52,7 +64,7 @@
 }]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="/Applications/Unity/Hub/Editor/2022.3.18f1/Unity.app/Contents/MacOS/Unity" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.18f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath C:\Users\danig\Desktop\POO1\POO1 -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="C:\Users\danig\Desktop\POO1\POO1" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -60,7 +72,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="/Applications/Unity/Hub/Editor/2022.3.18f1/Unity.app/Contents/MacOS/Unity" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.18f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath C:\Users\danig\Desktop\POO1\POO1 -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="C:\Users\danig\Desktop\POO1\POO1" />
       <option name="PASS_PARENT_ENVS" value="1" />

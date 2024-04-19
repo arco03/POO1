@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterName: WALTER ALONSO
   characterSprite: {fileID: 21300000, guid: 76dc6bb4e481f974fa25d60a0218e969, type: 3}
-  animatorController: {fileID: 0}
+  characterPrefab: {fileID: 1456807118477427991, guid: 007b380dcfaa5074a85b3135ba882226, type: 3}

@@ -19,9 +19,11 @@ namespace Playable
         [SerializeField] private float speed;
         [SerializeField] private float attackRange;
         [SerializeField] private Transform controladorAtaque;
+        [SerializeField] private float radio;
         [SerializeField] private VariableInt hp;
         [SerializeField] private Bullet bulletPrefab;
         [SerializeField] private Transform spawnPosition;
+        [SerializeField] private CharacterAnimator characterAnimator;
 
         [FormerlySerializedAs("_character")][SerializeField] private CharacterController characterController;
 
@@ -31,13 +33,14 @@ namespace Playable
 
             
 
-            characterController.SetUp(hp,jumpForce, speed, attackRange,  bulletPrefab, spawnPosition,controladorAtaque);
+            characterController.SetUp(hp,jumpForce, speed, attackRange, bulletPrefab, spawnPosition,controladorAtaque, radio);
 
         }
 
         private void FixedUpdate()
         {
             characterController.Move(_x);
+            characterAnimator.Walk();
         }
 
         private void Update()
@@ -46,16 +49,19 @@ namespace Playable
             if (Input.GetKeyDown(jumpKey))
             {
                 characterController.Jump();
+                
             }
 
             if (Input.GetKeyDown(attackGunKey))
             {
                 characterController.AttackGun();
+                characterAnimator.Attack2();
             }
             
             if (Input.GetKeyDown(teclaAtaque))
             {
                 characterController.AttackMelee();
+                characterAnimator.Attack1();
             }
 
         }

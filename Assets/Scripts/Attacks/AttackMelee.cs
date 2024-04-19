@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Attacks
 {
-    public class AttackMelee : MonoBehaviour, IAttack
+    public class AttackMelee : IAttack
     {
         [SerializeField] private Transform controladorAtaque;
         [SerializeField] private float radio;
@@ -27,7 +27,7 @@ namespace Attacks
             {
                 if (colisionador.CompareTag(tagPlayer))
                 {
-                    print("me pegaste");
+                    Debug.Log("me pegaste");
                 }
             }
         }
