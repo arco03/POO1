@@ -24,15 +24,12 @@ namespace Playable
         private AttackMelee _attackMelee;
 
         // SetUp Method that inject dependencies.
-        public void SetUp(VariableInt hp, float jumpForce, float speed, float attackRange, Transform attackPointA,
-            Transform attackPointB, Bullet bulletPrefab, Transform spawnPosition)
+        public void SetUp(VariableInt hp, float jumpForce, float speed, float attackRange, Bullet bulletPrefab, Transform spawnPosition)
         {
             _hp = hp;
             _jumpForce = jumpForce;
             _speed = speed;
             _attackRange = attackRange;
-            _attackPointA = attackPointA;
-            _attackPointB = attackPointB;
             _bulletPrefab = bulletPrefab;
             _spawnPosition = spawnPosition;
         }

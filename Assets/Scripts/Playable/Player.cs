@@ -5,12 +5,12 @@ using Variables;
 
 namespace Playable
 {
-    public class Player : MonoBehaviour  
+    public class Player : MonoBehaviour
     {
         [Header("Control Settings")]
         [SerializeField] private string horizontal;
         [SerializeField] private string jumpKey;
-        [SerializeField] private string attackMeleeKey;
+        [SerializeField] private KeyCode teclaAtaque;
         [SerializeField] private string attackGunKey;
 
 
@@ -18,60 +18,43 @@ namespace Playable
         [SerializeField] private float jumpForce;
         [SerializeField] private float speed;
         [SerializeField] private float attackRange;
-        [SerializeField] private Transform attackPointA;
-        [SerializeField] private Transform attackPointB;
+        [SerializeField] private Transform controladorAtaque;
         [SerializeField] private VariableInt hp;
         [SerializeField] private Bullet bulletPrefab;
         [SerializeField] private Transform spawnPosition;
-        
-        [FormerlySerializedAs("_character")] [SerializeField] private CharacterController characterController;
-        [SerializeField] private CharacterAnimator characterAnimator;
-        
-        private float _x;
 
+        [FormerlySerializedAs("_character")][SerializeField] private CharacterController characterController;
+
+        private float _x;
         private void Start()
         {
-            characterController.SetUp(hp,jumpForce, speed, attackRange, attackPointA, attackPointB, bulletPrefab, spawnPosition);
+            characterController.SetUp(hp, jumpForce, speed, attackRange, bulletPrefab, spawnPosition);
+
         }
-        
+
         private void FixedUpdate()
         {
             characterController.Move(_x);
-            characterAnimator.Walk();
         }
-        
+
         private void Update()
         {
             _x = Input.GetAxisRaw(horizontal);
-            PJump();
-            PAttackGun();
-            PAttackMelee();
-        }
-
-        public void PJump ()
-        {
             if (Input.GetKeyDown(jumpKey))
             {
                 characterController.Jump();
             }
-        }
 
-        public void PAttackGun()
-        {
             if (Input.GetKeyDown(attackGunKey))
             {
                 characterController.AttackGun();
-                characterAnimator.Attack2();
             }
-        }
 
-        public void PAttackMelee()
-        {
-            if (Input.GetKeyDown(attackMeleeKey))
+            if (Input.GetKeyDown(teclaAtaque))
             {
                 characterController.AttackMelee();
-                characterAnimator.Attack2();
             }
         }
     }
 }
+
