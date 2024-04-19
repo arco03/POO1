@@ -24,20 +24,23 @@ namespace Playable
         private AttackMelee _attackMelee;
 
         // SetUp Method that inject dependencies.
-        public void SetUp(VariableInt hp, float jumpForce, float speed, float attackRange, Bullet bulletPrefab, Transform spawnPosition)
+        public void SetUp(VariableInt hp, float jumpForce, float speed, float attackRange, Transform attackPointA,
+            Transform attackPointB, Bullet bulletPrefab, Transform spawnPosition)
         {
             _hp = hp;
             _jumpForce = jumpForce;
             _speed = speed;
             _attackRange = attackRange;
+            _attackPointA = attackPointA;
+            _attackPointB = attackPointB;
             _bulletPrefab = bulletPrefab;
             _spawnPosition = spawnPosition;
         }
         public void AttackGun()
         {
-             Instantiate(_bulletPrefab, _spawnPosition.position, Quaternion.identity);
-             IAttack iattackGun = new AttackGun();
-             iattackGun.Attack();
+            Instantiate(_bulletPrefab, _spawnPosition.position, Quaternion.identity);
+            IAttack iattackGun = new AttackGun();
+            iattackGun.Attack();
         }
 
         public void AttackMelee()
@@ -46,7 +49,7 @@ namespace Playable
             iattackMelee.Attack();
         }
 
-        public void Jump()    
+        public void Jump()
         {
             if (!_onGround) return;
 
@@ -62,7 +65,7 @@ namespace Playable
 
         public void Damage(int damage)
         {
-            
+
         }
 
         public void KnockBack()

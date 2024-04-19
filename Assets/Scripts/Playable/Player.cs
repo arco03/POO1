@@ -10,7 +10,7 @@ namespace Playable
         [Header("Control Settings")]
         [SerializeField] private string horizontal;
         [SerializeField] private string jumpKey;
-        [SerializeField] private KeyCode teclaAtaque;
+        [SerializeField] private string attackMeleeKey;
         [SerializeField] private string attackGunKey;
 
 
@@ -18,7 +18,8 @@ namespace Playable
         [SerializeField] private float jumpForce;
         [SerializeField] private float speed;
         [SerializeField] private float attackRange;
-        [SerializeField] private Transform controladorAtaque;
+        [SerializeField] private Transform attackPointA;
+        [SerializeField] private Transform attackPointB;
         [SerializeField] private VariableInt hp;
         [SerializeField] private Bullet bulletPrefab;
         [SerializeField] private Transform spawnPosition;
@@ -28,8 +29,7 @@ namespace Playable
         private float _x;
         private void Start()
         {
-            characterController.SetUp(hp, jumpForce, speed, attackRange, bulletPrefab, spawnPosition);
-
+            characterController.SetUp(hp, jumpForce, speed, attackRange, attackPointA, attackPointB, bulletPrefab, spawnPosition);
         }
 
         private void FixedUpdate()
@@ -50,10 +50,11 @@ namespace Playable
                 characterController.AttackGun();
             }
 
-            if (Input.GetKeyDown(teclaAtaque))
+            if (Input.GetKeyDown(attackMeleeKey))
             {
                 characterController.AttackMelee();
             }
+
         }
     }
 }
