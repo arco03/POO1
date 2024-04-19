@@ -13,28 +13,27 @@ namespace Playable
         private float _jumpForce;
         private float _speed;
         private float _attackRange;
-        private Transform _attackPointA;
-        private Transform _attackPointB;
+        private Transform _controladorAtaque;
         private Bullet _bulletPrefab;
         private Transform _spawnPosition;
+        [SerializeField] private AttackMelee _attackMelee;
 
         private Rigidbody2D _rb;
         private bool _onGround;
         public AttackGun _attackGun;
-        private AttackMelee _attackMelee;
+        
 
         // SetUp Method that inject dependencies.
-        public void SetUp(VariableInt hp, float jumpForce, float speed, float attackRange, Transform attackPointA,
-            Transform attackPointB, Bullet bulletPrefab, Transform spawnPosition)
+        public void SetUp(VariableInt hp, float jumpForce, float speed, float attackRange,
+            Bullet bulletPrefab, Transform spawnPosition,Transform controladorAtaque)
         {
             _hp = hp;
             _jumpForce = jumpForce;
             _speed = speed;
             _attackRange = attackRange;
-            _attackPointA = attackPointA;
-            _attackPointB = attackPointB;
             _bulletPrefab = bulletPrefab;
             _spawnPosition = spawnPosition;
+            _controladorAtaque = controladorAtaque;
         }
         public void AttackGun()
         {
@@ -45,8 +44,8 @@ namespace Playable
 
         public void AttackMelee()
         {
-            IAttack iattackMelee = new AttackMelee();
-            iattackMelee.Attack();
+           _attackMelee.Attack();
+            
         }
 
         public void Jump()    
