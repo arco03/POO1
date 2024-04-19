@@ -1,27 +1,41 @@
 ﻿using System;
+using Playable;
 using UnityEngine;
 
 namespace Attacks
 {
-    public class AttackMelee : IAttack
+    public class AttackMelee : MonoBehaviour, IAttack
     {
-        private Transform _attackPointA, _attackPointB;
-        
+        [SerializeField] private Transform controladorAtaque;
+        [SerializeField] private float radio;
+        [SerializeField] private string tagPlayer;
+        [SerializeField] private KeyCode teclaAtaque;
+
+
+        private void Update()
+        {
+            if (Input.GetKeyDown(teclaAtaque))
+            {
+                Attack();
+            }
+        }
+
         public void Attack()
         {
-            Collider2D[] results = new Collider2D[2];
-            Physics2D.OverlapAreaNonAlloc(_attackPointA.position, _attackPointB.position,results);
-
-            foreach (Collider2D coll in results)
+            Collider2D[] objeto = Physics2D.OverlapCircleAll(controladorAtaque.position, radio);
+            foreach (var colisionador in objeto)
             {
-                if (!coll) continue;
-                if (coll.CompareTag("Player"))
+                if (colisionador.CompareTag(tagPlayer))
                 {
-                    Debug.Log("Ataque Melee gg");
+                    print("me pegaste");
                 }
-
-
             }
+        }
+
+        public void OnDrawGizmos()
+        {
+            Gizmos.color = Color.red;
+            Gizmos.DrawWireSphere(controladorAtaque.position,radio);
         }
     }
 }
