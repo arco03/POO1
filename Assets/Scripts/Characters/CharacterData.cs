@@ -3,7 +3,7 @@
 namespace Characters
 {
     [CreateAssetMenu(menuName = "CreateCharacter", fileName = "Character")]
-    public class Character : ScriptableObject
+    public class CharacterData : ScriptableObject
     {
         public string characterName;
         public Sprite characterSprite;

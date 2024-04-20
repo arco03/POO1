@@ -6,36 +6,23 @@ namespace Attacks
 {
     public class AttackMelee : IAttack
     {
-        [SerializeField] private Transform controladorAtaque;
-        [SerializeField] private float radio;
-        [SerializeField] private string tagPlayer;
-        [SerializeField] private KeyCode teclaAtaque;
-
-
-        private void Update()
-        {
-            if (Input.GetKeyDown(teclaAtaque))
-            {
-                Attack();
-            }
-        }
-
+        //Dependencies
+        private Transform _attackController;
+        private float _radius;
+        private string _tagPlayer;
+        private Player _player;
+        
         public void Attack()
         {
-            Collider2D[] objeto = Physics2D.OverlapCircleAll(controladorAtaque.position, radio);
-            foreach (var colisionador in objeto)
+            Collider2D[] objects = new Collider2D[2];
+            Physics2D.OverlapCircleNonAlloc(_attackController.position, _radius,objects);
+            foreach (var coll in objects)
             {
-                if (colisionador.CompareTag(tagPlayer))
+                if (coll.CompareTag(_tagPlayer))
                 {
                     Debug.Log("me pegaste");
                 }
             }
-        }
-
-        public void OnDrawGizmos()
-        {
-            Gizmos.color = Color.red;
-            Gizmos.DrawWireSphere(controladorAtaque.position,radio);
         }
     }
 }

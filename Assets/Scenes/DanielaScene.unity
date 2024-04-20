@@ -138,9 +138,10 @@ GameObject:
   - component: {fileID: 380880877}
   - component: {fileID: 380880876}
   - component: {fileID: 380880875}
+  - component: {fileID: 380880882}
   m_Layer: 0
   m_Name: WalterAlonsoPrefab
-  m_TagString: Untagged
+  m_TagString: Player1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -188,12 +189,14 @@ MonoBehaviour:
   jumpForce: 6
   speed: 7
   attackRange: 0
-  attackPointA: {fileID: 1291294030}
-  attackPointB: {fileID: 1491954262}
+  attackController: {fileID: 1291294030}
+  radius: 0.6
+  tagPlayer: Player1
   hp: {fileID: 11400000, guid: cd64d31a34a7ba442ac8c6793c9f0fb7, type: 2}
   bulletPrefab: {fileID: 8260139257446152741, guid: 770cc225a4968824daf595646f3ee4ae, type: 3}
   spawnPosition: {fileID: 1052641313}
-  characterController: {fileID: 380880876}
+  characterAnimator: {fileID: 380880875}
+  character: {fileID: 380880876}
 --- !u!50 &380880878
 Rigidbody2D:
   serializedVersion: 4
@@ -287,7 +290,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1291294030}
-  - {fileID: 1491954262}
   - {fileID: 1052641313}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -336,6 +338,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.2373207, y: 1.6}
   m_EdgeRadius: 0
+--- !u!95 &380880882
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 380880874}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 11a0fcaca2e1fb94c987279321551f66, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &725122528
 GameObject:
   m_ObjectHideFlags: 0
@@ -644,7 +667,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1291294030}
   m_Layer: 0
-  m_Name: AttackPointA
+  m_Name: attackPoint
   m_TagString: Untagged
   m_Icon: {fileID: 7866945982896999795, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -659,39 +682,8 @@ Transform:
   m_GameObject: {fileID: 1291294029}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.674, y: 0.667, z: 0}
+  m_LocalPosition: {x: 0.79, y: -0.18, z: 0}
   m_LocalScale: {x: 1, y: 0.65, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 380880880}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1491954261
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1491954262}
-  m_Layer: 0
-  m_Name: AttackPointB
-  m_TagString: Untagged
-  m_Icon: {fileID: 7866945982896999795, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1491954262
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1491954261}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.986, y: -0.74, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 380880880}

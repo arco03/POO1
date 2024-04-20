@@ -1,6 +1,6 @@
+using Attacks;
 using Interactable;
 using UnityEngine;
-using UnityEngine.Serialization;
 using Variables;
 
 namespace Playable
@@ -10,7 +10,7 @@ namespace Playable
         [Header("Control Settings")]
         [SerializeField] private string horizontal;
         [SerializeField] private string jumpKey;
-        [SerializeField] private KeyCode teclaAtaque;
+        [SerializeField] private string attackMeleeKey;
         [SerializeField] private string attackGunKey;
 
 
@@ -18,28 +18,30 @@ namespace Playable
         [SerializeField] private float jumpForce;
         [SerializeField] private float speed;
         [SerializeField] private float attackRange;
-        [SerializeField] private Transform controladorAtaque;
-        [SerializeField] private float radio;
+        [SerializeField] private Transform attackController;
+        [SerializeField] private float radius;
+        [SerializeField] private string tagPlayer;
         [SerializeField] private VariableInt hp;
         [SerializeField] private Bullet bulletPrefab;
         [SerializeField] private Transform spawnPosition;
         [SerializeField] private CharacterAnimator characterAnimator;
-
-        [FormerlySerializedAs("_character")][SerializeField] private CharacterController characterController;
-
+        [SerializeField] private Character character;
+        
         private float _x;
+        private AttackMelee _attackMelee;
+
+        public Player(Transform attackController, float radius, string tagPlayer)
+        {
+            
+        }
         private void Start()
         {
-
-            
-
-            characterController.SetUp(hp,jumpForce, speed, attackRange, bulletPrefab, spawnPosition,controladorAtaque, radio);
-
+            character.SetUp(hp,jumpForce, speed, attackRange, bulletPrefab, spawnPosition);
         }
 
         private void FixedUpdate()
         {
-            characterController.Move(_x);
+            character.Move(_x);
             characterAnimator.Walk();
         }
 
@@ -48,22 +50,20 @@ namespace Playable
             _x = Input.GetAxisRaw(horizontal);
             if (Input.GetKeyDown(jumpKey))
             {
-                characterController.Jump();
-                
-            }
-
-            if (Input.GetKeyDown(attackGunKey))
-            {
-                characterController.AttackGun();
-                characterAnimator.Attack2();
+                character.Jump();
             }
             
-            if (Input.GetKeyDown(teclaAtaque))
+            if (Input.GetKeyDown(attackMeleeKey))
             {
-                characterController.AttackMelee();
+                character.AttackMelee();
                 characterAnimator.Attack1();
             }
-
+            
+            if (Input.GetKeyDown(attackGunKey))
+            {
+                character.AttackGun();
+                characterAnimator.Attack2();
+            }
         }
     }
 }
