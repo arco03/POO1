@@ -21,9 +21,9 @@ namespace UI.ChooseCharacter
             
             characterView.Subscribe();
 
-            Character character = playerConfiguration.characters[_currentIndex];
-            Sprite characterSprite = character.characterSprite;
-            string characterName = character.characterName;
+            CharacterData characterData = playerConfiguration.characters[_currentIndex];
+            Sprite characterSprite = characterData.characterSprite;
+            string characterName = characterData.characterName;
             
             characterView.ChangeCharacter(characterSprite, characterName);
         }
@@ -39,7 +39,7 @@ namespace UI.ChooseCharacter
             _currentIndex += index;
             _currentIndex = Mathf.Clamp(_currentIndex, 0, playerConfiguration.characters.Count - 1);
             
-            Character playerSelection = playerConfiguration.characters[_currentIndex];
+            CharacterData playerSelection = playerConfiguration.characters[_currentIndex];
             Sprite characterSprite = playerSelection.characterSprite;
             string characterName = playerSelection.characterName;
 

@@ -6,46 +6,43 @@ using Variables;
 namespace Playable
 {
     [RequireComponent(typeof(Rigidbody2D))]
-    public class CharacterController : MonoBehaviour, IDamageable
+    public class Character : MonoBehaviour, IDamageable
     {
         // Dependencies
         private VariableInt _hp;
         private float _jumpForce;
         private float _speed;
-        private float _attackRange;
-        private Transform _controladorAtaque;
         private Bullet _bulletPrefab;
         private Transform _spawnPosition;
-        [SerializeField] private AttackMelee _attackMelee;
-
+        private Transform attackController;
+        private static float radius;
+        private static string tagPLayer;
+        
         private Rigidbody2D _rb;
         private bool _onGround;
-        public AttackGun _attackGun;
-        
+        IAttack iattackGun = new AttackGun();
+        IAttack iattack = new AttackMelee();
 
         // SetUp Method that inject dependencies.
         public void SetUp(VariableInt hp, float jumpForce, float speed, float attackRange,
-            Bullet bulletPrefab, Transform spawnPosition,Transform controladorAtaque)
+            Bullet bulletPrefab, Transform spawnPosition)
         {
             _hp = hp;
             _jumpForce = jumpForce;
             _speed = speed;
-            _attackRange = attackRange;
             _bulletPrefab = bulletPrefab;
             _spawnPosition = spawnPosition;
-            _controladorAtaque = controladorAtaque;
         }
+        
         public void AttackGun()
         {
             Instantiate(_bulletPrefab, _spawnPosition.position, Quaternion.identity);
-            IAttack iattackGun = new AttackGun();
             iattackGun.Attack();
         }
 
         public void AttackMelee()
         {
-           _attackMelee.Attack();
-            
+            iattack.Attack();
         }
 
         public void Jump()
@@ -70,8 +67,8 @@ namespace Playable
         public void KnockBack()
         {
 
+            
         }
-
         private void Awake()
         {
             _rb = GetComponent<Rigidbody2D>();
@@ -85,5 +82,10 @@ namespace Playable
                 _onGround = true;
             }
         }
+        //public void OnDrawGizmos()
+        //{
+          //  Gizmos.color = Color.red;
+            //Gizmos.DrawWireSphere(_attackController.position,_radius);
+        //}
     }
 }
