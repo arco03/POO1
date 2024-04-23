@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Playable;
+using UnityEngine;
 
 namespace Characters
 {
@@ -7,6 +8,6 @@ namespace Characters
     {
         public string characterName;
         public Sprite characterSprite;
-        public GameObject characterPrefab;
+        public Character characterPrefab;
     }
 }

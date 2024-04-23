@@ -26,17 +26,15 @@ namespace Playable
         [SerializeField] private Transform spawnPosition;
         [SerializeField] private CharacterAnimator characterAnimator;
         [SerializeField] private Character character;
-        
-        private float _x;
         private AttackMelee _attackMelee;
-
-        public Player(Transform attackController, float radius, string tagPlayer)
-        {
-            
-        }
+        private float _x;
+        
+        
         private void Start()
         {
-            character.SetUp(hp,jumpForce, speed, attackRange, bulletPrefab, spawnPosition);
+            character.SetUp(hp,jumpForce, speed, attackRange, bulletPrefab, spawnPosition,
+                attackController,radius,tagPlayer);
+            // _attackMelee.SetAttack(attackController,radius,tagPlayer);
         }
 
         private void FixedUpdate()
@@ -52,19 +50,25 @@ namespace Playable
             {
                 character.Jump();
             }
-            
+
             if (Input.GetKeyDown(attackMeleeKey))
             {
                 character.AttackMelee();
                 characterAnimator.Attack1();
             }
-            
+
             if (Input.GetKeyDown(attackGunKey))
             {
                 character.AttackGun();
                 characterAnimator.Attack2();
             }
         }
+
+        public void OnDrawGizmos()
+            { 
+                Gizmos.color = Color.red;
+                Gizmos.DrawWireSphere(attackController.position,radius);
+            }
     }
 }
 

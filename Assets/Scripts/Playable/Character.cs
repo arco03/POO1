@@ -14,10 +14,10 @@ namespace Playable
         private float _speed;
         private Bullet _bulletPrefab;
         private Transform _spawnPosition;
-        private Transform attackController;
-        private static float radius;
-        private static string tagPLayer;
-        
+        private Transform _attackController;
+        private float _radius;
+        private string _tagPlayer;
+
         private Rigidbody2D _rb;
         private bool _onGround;
         IAttack iattackGun = new AttackGun();
@@ -25,15 +25,18 @@ namespace Playable
 
         // SetUp Method that inject dependencies.
         public void SetUp(VariableInt hp, float jumpForce, float speed, float attackRange,
-            Bullet bulletPrefab, Transform spawnPosition)
+            Bullet bulletPrefab, Transform spawnPosition, Transform attackController, float radius, string tagPlayer)
         {
             _hp = hp;
             _jumpForce = jumpForce;
             _speed = speed;
             _bulletPrefab = bulletPrefab;
             _spawnPosition = spawnPosition;
+            _attackController = attackController;
+            _radius = radius;
+            _tagPlayer = tagPlayer;
         }
-        
+
         public void AttackGun()
         {
             Instantiate(_bulletPrefab, _spawnPosition.position, Quaternion.identity);
@@ -42,6 +45,19 @@ namespace Playable
 
         public void AttackMelee()
         {
+            Collider2D[] objects = new Collider2D[2];
+            Physics2D.OverlapCircleNonAlloc(_attackController.position, _radius,objects);
+            foreach (var coll in objects)
+            {
+                if (coll.CompareTag(_tagPlayer))
+                {
+                    Debug.Log("me pegaste");
+                }
+                else
+                {
+                    return;
+                }
+            }
             iattack.Attack();
         }
 
@@ -67,8 +83,9 @@ namespace Playable
         public void KnockBack()
         {
 
-            
+
         }
+
         private void Awake()
         {
             _rb = GetComponent<Rigidbody2D>();
@@ -82,10 +99,5 @@ namespace Playable
                 _onGround = true;
             }
         }
-        //public void OnDrawGizmos()
-        //{
-          //  Gizmos.color = Color.red;
-            //Gizmos.DrawWireSphere(_attackController.position,_radius);
-        //}
     }
 }
