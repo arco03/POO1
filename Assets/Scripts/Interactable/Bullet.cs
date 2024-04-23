@@ -13,12 +13,12 @@ namespace Interactable
             _rigidBody2D = GetComponent<Rigidbody2D>();
         }
 
-        private void Update()
+        private void Start()
         {
             _rigidBody2D.velocity = Vector2.right * speed;
         }
 
-        private void OnTriggerEnter(Collider other)
+        private void OnTriggerEnter2D(Collider2D other)
         {
             if (other.CompareTag("Player"))
             {

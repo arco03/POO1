@@ -55,7 +55,7 @@ namespace Playable
                 }
                 else
                 {
-                    return;
+                    break;
                 }
             }
             iattack.Attack();

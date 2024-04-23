@@ -5,22 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d025a2b9-4f32-47dc-82ac-560d7ca96109" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Menu/ChangeEscene.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Menu/ChangeEscene.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.POO1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.POO1/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Data/Characters/Antonio.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Characters/Antonio.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Data/Characters/Juan.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Characters/Juan.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Data/Characters/Migue.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Characters/Migue.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Data/Characters/Walter Alonso.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Characters/Walter Alonso.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Data/Characters/Yeison.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Characters/Yeison.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MenuTimeLine.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MenuTimeLine.playable" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MenuTimeLine.playable.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MenuTimeLine.playable.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/bullet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/bullet.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/ChooseCharacters.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ChooseCharacters.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MiguelScene.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MiguelScene.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Attacks/AttackGun.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Attacks/AttackGun.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Attacks/AttackMelee.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Attacks/AttackMelee.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Playable/CharacterController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Playable/CharacterController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Playable/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Playable/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Characters/Campesino/Idle/campesino_idle.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Characters/Campesino/Idle/campesino_idle.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Characters/Gamin/Idle/gamin_idle.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Characters/Gamin/Idle/gamin_idle.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Characters/Muñeco Normal/Idle/juan_idle.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Characters/Muñeco Normal/Idle/juan_idle.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Characters/Nero/Idle/nero_idle.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Characters/Nero/Idle/nero_idle.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Characters/Pupi/Idle/pupi_idle.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Characters/Pupi/Idle/pupi_idle.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interactable/Bullet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interactable/Bullet.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Playable/Character.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Playable/Character.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Playable/CharacterAnimator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Playable/CharacterAnimator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Menu/BackgroundMenu.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Menu/BackgroundMenu.jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Menu/fonts/upheavtt SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Menu/fonts/upheavtt SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Menu/fotio.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Menu/fotio.jpg.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TimelineSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TimelineSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,26 +48,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;develop&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "develop",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;rider.external.source.directories&quot;: [
-      &quot;C:\\Users\\danig\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache&quot;,
-      &quot;C:\\Users\\danig\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache&quot;,
-      &quot;C:\\Users\\danig\\AppData\\Local\\Symbols\\src&quot;
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "C:\\Users\\Usuario16\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache",
+      "C:\\Users\\Usuario16\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache",
+      "C:\\Users\\Usuario16\\AppData\\Local\\Symbols\\src"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.18f1\Editor\Unity.exe" />
@@ -117,6 +123,7 @@
       <workItem from="1713631278395" duration="10013000" />
       <workItem from="1713720955627" duration="11875000" />
       <workItem from="1713755491094" duration="880000" />
+      <workItem from="1713885660895" duration="10243000" />
     </task>
     <servers />
   </component>
