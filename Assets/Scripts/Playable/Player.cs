@@ -42,7 +42,11 @@ namespace Playable
         private void FixedUpdate()
         {
             character.Move(_x);
+
             characterAnimator.AnimateBool("Walk",true);
+
+           
+
         }
 
         private void Update()
@@ -56,13 +60,21 @@ namespace Playable
             if (Input.GetKeyDown(attackMeleeKey))
             {
                 character.AttackMelee();
+
                 characterAnimator.AnimateTrigger("Atack1");
+
+                
+
             }
 
             if (Input.GetKeyDown(attackGunKey))
             {
                 character.AttackGun();
+
                 
+
+               
+
             }
         }
 
