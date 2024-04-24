@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterName: ANTONIO
   characterSprite: {fileID: 21300000, guid: efea8bffa29c9cd499552e3fbd59c0f7, type: 3}
-  characterPrefab: {fileID: 3546355487259974835, guid: c6ace889f37bbfd4c8988e8aef75f03d, type: 3}
+  characterPrefab: {fileID: -3128730459973525472, guid: c6ace889f37bbfd4c8988e8aef75f03d, type: 3}
