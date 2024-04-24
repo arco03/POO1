@@ -40,7 +40,7 @@ namespace Playable
         private void FixedUpdate()
         {
             character.Move(_x);
-            characterAnimator.Walk();
+           // characterAnimator.Walk();
         }
 
         private void Update()
@@ -54,13 +54,13 @@ namespace Playable
             if (Input.GetKeyDown(attackMeleeKey))
             {
                 character.AttackMelee();
-                characterAnimator.Attack1();
+                //characterAnimator.Attack1();
             }
 
             if (Input.GetKeyDown(attackGunKey))
             {
                 character.AttackGun();
-                characterAnimator.Attack2();
+               // characterAnimator.Attack2();
             }
         }
 
