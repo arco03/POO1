@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterName: MIGUE
   characterSprite: {fileID: 104469578, guid: f08ff972ef7f65a4f88ec023013ea5b5, type: 3}
-  characterPrefab: {fileID: 5779400306972974159, guid: 97c00e36727a6df4591a6b57d23e9bfb, type: 3}
+  characterPrefab: {fileID: 3567137738648677941, guid: 97c00e36727a6df4591a6b57d23e9bfb, type: 3}
