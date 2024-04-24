@@ -4,7 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d025a2b9-4f32-47dc-82ac-560d7ca96109" name="Changes" comment="" />
+    <list default="true" id="d025a2b9-4f32-47dc-82ac-560d7ca96109" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Instantiate.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Instantiate/GameInstaller.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Instantiate/GameInstaller.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.POO1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.POO1/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/Characters/Antonio.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Characters/Antonio.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/Characters/Juan.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Characters/Juan.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/Characters/Migue.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Characters/Migue.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/Characters/Walter Alonso.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Characters/Walter Alonso.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/Characters/Yeison.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Characters/Yeison.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Characters/Campesino/Campesino.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Characters/Campesino/Campesino.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Characters/Gamin/Gamin.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Characters/Gamin/Gamin.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Characters/Normal/Juan..prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Characters/Normal/Juan..prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Characters/Pupi/Antonio.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Characters/Pupi/Antonio.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Characters/Ñero/Migue.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Characters/Ñero/Migue.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ChooseCharacters.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ChooseCharacters.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Credits.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Credits.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Playable/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Playable/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

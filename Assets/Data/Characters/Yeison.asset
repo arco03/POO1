@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterName: YEISON
   characterSprite: {fileID: -1960736773, guid: 4b518224fe0ffa04cae42490d5cbd4bb, type: 3}
-  characterPrefab: {fileID: 3578219006621843407, guid: 3ad3292d2334ece46a2e1759678a8bbd, type: 3}
+  characterPrefab: {fileID: 1061086871036801566, guid: 3ad3292d2334ece46a2e1759678a8bbd, type: 3}

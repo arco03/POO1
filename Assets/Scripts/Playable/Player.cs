@@ -56,7 +56,6 @@ namespace Playable
             {
                 character.Jump();
             }
-
             if (Input.GetKeyDown(attackMeleeKey))
             {
                 character.AttackMelee();

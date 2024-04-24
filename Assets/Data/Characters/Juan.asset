@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterName: JUAN
   characterSprite: {fileID: 21300000, guid: d4760e76b2df5284389fd05e4944aeff, type: 3}
-  characterPrefab: {fileID: 7561551269766863232, guid: 8fd21390b81fa9442a6c89601dfe7ac9, type: 3}
+  characterPrefab: {fileID: -7691305545410586592, guid: 8fd21390b81fa9442a6c89601dfe7ac9, type: 3}
