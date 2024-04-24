@@ -22,7 +22,12 @@ namespace Playable
             _animator.SetTrigger(nameAnimation);
             
         }
-        
+
+        public void AnimateBool(string nameAnimation, bool valor)
+        {
+            ResetAnimation();
+            _animator.SetBool(nameAnimation,valor);
+        }
 
     }
 }

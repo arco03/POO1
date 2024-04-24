@@ -1,3 +1,4 @@
+using System;
 using Attacks;
 using Interactable;
 using UnityEngine;
@@ -21,7 +22,8 @@ namespace Playable
         private Rigidbody2D _rb;
         private bool _onGround;
         IAttack iattackGun = new AttackGun();
-        IAttack iattack = new AttackMelee();
+        IAttack iattackMelee;
+        
 
         // SetUp Method that inject dependencies.
         public void SetUp(VariableInt hp, float jumpForce, float speed, float attackRange,
@@ -45,20 +47,8 @@ namespace Playable
 
         public void AttackMelee()
         {
-            Collider2D[] objects = new Collider2D[2];
-            Physics2D.OverlapCircleNonAlloc(_attackController.position, _radius,objects);
-            foreach (var coll in objects)
-            {
-                if (coll.CompareTag(_tagPlayer))
-                {
-                    Debug.Log("me pegaste");
-                }
-                else
-                {
-                    break;
-                }
-            }
-            iattack.Attack();
+           
+            iattackMelee.Attack();
         }
 
         public void Jump()
@@ -90,7 +80,13 @@ namespace Playable
         {
             _rb = GetComponent<Rigidbody2D>();
             _onGround = true;
+            iattackMelee = new AttackMelee(_attackController, _radius, _tagPlayer);
+            
+            
+            
         }
+
+        
 
         private void OnCollisionEnter2D(Collision2D collision)
         {
@@ -98,6 +94,11 @@ namespace Playable
             {
                 _onGround = true;
             }
+        }
+
+        public void SetAttackMelee(IAttack attackMelee)
+        {
+            iattackMelee = attackMelee;
         }
     }
 }

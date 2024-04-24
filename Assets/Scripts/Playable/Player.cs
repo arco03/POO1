@@ -34,13 +34,15 @@ namespace Playable
         {
             character.SetUp(hp,jumpForce, speed, attackRange, bulletPrefab, spawnPosition,
                 attackController,radius,tagPlayer);
-            // _attackMelee.SetAttack(attackController,radius,tagPlayer);
+            _attackMelee = new AttackMelee(attackController, radius, tagPlayer);
+            character.SetAttackMelee(_attackMelee);
         }
+
 
         private void FixedUpdate()
         {
             character.Move(_x);
-            characterAnimator.Walk();
+            characterAnimator.AnimateBool("Walk",true);
         }
 
         private void Update()
@@ -54,13 +56,13 @@ namespace Playable
             if (Input.GetKeyDown(attackMeleeKey))
             {
                 character.AttackMelee();
-                characterAnimator.Attack1();
+                characterAnimator.AnimateTrigger("Atack1");
             }
 
             if (Input.GetKeyDown(attackGunKey))
             {
                 character.AttackGun();
-                characterAnimator.Attack2();
+                
             }
         }
 
