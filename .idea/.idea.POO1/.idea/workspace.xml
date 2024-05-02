@@ -5,26 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d025a2b9-4f32-47dc-82ac-560d7ca96109" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Instantiate.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Instantiate/GameInstaller.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Instantiate/GameInstaller.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Instantiate/CharacterFactory.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Instantiate/CharacterFactory.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.POO1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.POO1/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Data/Characters/Antonio.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Characters/Antonio.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Data/Characters/Juan.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Characters/Juan.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Data/Characters/Migue.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Characters/Migue.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Data/Characters/Walter Alonso.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Characters/Walter Alonso.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Data/Characters/Yeison.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Characters/Yeison.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Characters/Campesino/Campesino.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Characters/Campesino/Campesino.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Characters/Gamin/Gamin.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Characters/Gamin/Gamin.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Characters/Normal/Juan..prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Characters/Normal/Juan..prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Characters/Pupi/Antonio.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Characters/Pupi/Antonio.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Characters/Ñero/Migue.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Characters/Ñero/Migue.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ChooseCharacters.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ChooseCharacters.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Credits.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Credits.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Playable/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Playable/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Instantiate/GameInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Instantiate/GameInstaller.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +20,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/bff907ed581f483ab4bd129472866e971fe00/f0/33004392/CharacterController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TMP_Text.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
@@ -46,26 +32,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;develop&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "develop",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;rider.external.source.directories&quot;: [
-      &quot;C:\\Users\\Usuario19\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\DecompilerCache&quot;,
-      &quot;C:\\Users\\Usuario19\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\SourcesCache&quot;,
-      &quot;C:\\Users\\Usuario19\\AppData\\Local\\Symbols\\src&quot;
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "C:\\Users\\Usuario16\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache",
+      "C:\\Users\\Usuario16\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache",
+      "C:\\Users\\Usuario16\\AppData\\Local\\Symbols\\src"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.18f1\Editor\Unity.exe" />
@@ -124,6 +110,7 @@
       <workItem from="1713885660895" duration="10243000" />
       <workItem from="1713974472428" duration="1922000" />
       <workItem from="1713978837515" duration="7529000" />
+      <workItem from="1714674401944" duration="6440000" />
     </task>
     <servers />
   </component>

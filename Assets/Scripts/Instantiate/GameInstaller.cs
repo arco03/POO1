@@ -1,28 +1,32 @@
-﻿using System;
-using Configurations;
-using Unity.Mathematics;
-using Unity.VisualScripting;
+﻿using Configurations;
+using Playable;
 using UnityEngine;
 
 namespace Instantiate
 {
     public class GameInstaller : MonoBehaviour
     {
-        [SerializeField] private PlayerConfiguration configuration;
-        [SerializeField] private Transform positionPlayer1;
-        [SerializeField] private Transform positionPlayer2;
+        [Header("Requeriments")]
+        public Transform positionPlayer1;
+        public Transform positionPlayer2;
+        
+        [Header("Factory configuration")] 
+        public PlayerConfiguration configuration;
+
+        private CharacterFactory _characterFactory;
+
+        private void Awake()
+        {
+            _characterFactory = new CharacterFactory(configuration);
+        }
+
         private void Start()
         {
-            if (CompareTag("Player") == false)
-            {
-                Instantiate(configuration.playerSelections[1].characterPrefab,positionPlayer1.position,quaternion.identity);
-                if (CompareTag("Player2")== false)
-                {
-                    Instantiate(configuration.playerSelections[2].characterPrefab,positionPlayer2.position, Quaternion.Euler(0, 180, 0));
-                }
-            }
-             
-            
+            Character player1 = _characterFactory.Create(playerNumber:1);
+            Character player2 = _characterFactory.Create(playerNumber:2);
+
+            player1.transform.position = positionPlayer1.position;
+            player2.transform.position = positionPlayer2.position;
         }
     }
 }
